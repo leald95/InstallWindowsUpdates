@@ -124,4 +124,4 @@ if (!$ListOnly -and $RebootAtMidnight) {
 
 Write-Host 'Done.'
 }
-install_updates -MicrosoftUpdate -SkipFirmware -SkipDrivers -NoAutoReboot
+install_updates -MicrosoftUpdate -SkipFirmware -SkipDrivers -NoAutoReboot -Confirm:$False
