@@ -114,7 +114,7 @@ if ($SkipDrivers) {
 
 Write-Host 'Starting Windows Update Check/Install...'
 Write-Host ('-> Command used: "{0}"' -f $WUCommand)
-Invoke-Expression $WUCommand
+Invoke-Expression $WUCommand + ' -Severity Critical,Important'
 
 if (!$ListOnly -and $RebootAtMidnight) {
 	Write-Host 'Scheduling reboot for midnight tonight...'
