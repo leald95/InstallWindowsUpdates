@@ -46,8 +46,7 @@ if ($ResetDistributionFolder) {
 	Start-Service 'Windows Update'
 }
 
-[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-
+[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bOR [Net.SecurityProtocolType]::Tls12
 if (-not (Get-PackageProvider -Name 'NuGet')) {
 	Write-Host 'Installing NuGet...'
 	Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
