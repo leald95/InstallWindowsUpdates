@@ -111,7 +111,7 @@ if ($SkipDrivers) {
     }
 }
 
-$WUCommand = $WUCommand + ' -Severity Critical,Important'
+#$WUCommand = $WUCommand + ' -Severity Critical,Important'
 
 Write-Host 'Starting Windows Update Check/Install...'
 Write-Host ('-> Command used: "{0}"' -f $WUCommand)
